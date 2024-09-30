@@ -12,8 +12,7 @@ import { AsistProfeComponent} from './asist-profe/asist-profe.component';
 import { AsistAlumnoComponent} from './asist-alumno/asist-alumno.component';
 import { RestablecerComponent} from './restablecer/restablecer.component';
 import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from '../shared/header/header.component';
-import { FooterComponent } from '../shared/footer/footer.component';
+
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
