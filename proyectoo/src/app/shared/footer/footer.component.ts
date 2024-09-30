@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { UsuarioAPI } from 'src/app/models/usuariosApi.models';
 import { AuthService } from 'src/app/servicios/auth.service';
 

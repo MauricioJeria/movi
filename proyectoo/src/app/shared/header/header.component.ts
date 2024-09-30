@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
-import { DatosPersonalesService } from 'src/app/servicios/datos.service.ts';
+import { DatosService } from 'src/app/servicios/datos.service';
+
 
 interface UsuarioAPI { // Definir la interface para los usuarios de la API
   id: string,
@@ -10,7 +11,7 @@ interface UsuarioAPI { // Definir la interface para los usuarios de la API
   nombre: string,
   phone: string,
   rol: string
-  
+
 }
 
 @Component({
@@ -21,7 +22,7 @@ interface UsuarioAPI { // Definir la interface para los usuarios de la API
 export class HeaderComponent  implements OnInit {
 
   nombre: string; // Campo para almacenar el nombre
-  private sharedService = inject(DatosPersonalesService); // Obtener el servicio de datos personales
+  private sharedService = inject(DatosService); // Obtener el servicio de datos personales
 
   private authService = inject(AuthService); // Obtener el servicio de autenticación
   usuario: string; // Campo para almacenar el nombre del usuario
