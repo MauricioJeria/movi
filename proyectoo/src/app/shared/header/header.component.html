@@ -1,3 +1,17 @@
-<p>
-  header works!
-</p>
+<div class="cabecera" [ngClass]="{'iniciado': usuario!==''}">
+  @if (nombre){
+    <p>
+      Bienvenido: {{nombre}} - ROL: {{usuarioCompleto.rol}}
+    </p>
+  }
+  @else{
+    <p>
+      APP
+    </p>
+  }
+  @if (usuario!==''){
+    <p>
+      Usuario: {{usuario}} - {{usuarioCompleto.rol}}
+    </p>
+  }
+</div>

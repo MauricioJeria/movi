@@ -4,5 +4,18 @@
   <p><a [routerLink]= "['/not-found']">NotFound</a></p>
   <p><a [routerLink]= "['/login']">Login</a></p>
 
-
+  @if (usuario) {
+    <p><a [routerLink]="['/store']">Store</a></p>
+    <p><a [routerLink]="['/logout']">Logout</a></p>
+    @if (usuarioCompleto.rol === 'docente') {
+      <p><a [routerLink]="['/docente']">Docente</a></p>
+    }
+    @else {
+      <p><a [routerLink]="['/alumno']">Alumno</a></p>
+    }
+  }
+  @else {
+    <p><a [routerLink]="['/login']">Login</a></p>
+  }
 </div>
+
